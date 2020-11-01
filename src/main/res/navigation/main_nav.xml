@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_nav"
+    app:startDestination="@id/launcherFragment">
+    <fragment
+        android:id="@+id/launcherFragment"
+        android:name="com.e.golgirview.ui.main.LauncherFragment"
+        android:label="LauncherFragment" >
+        <action
+            android:id="@+id/action_launcherFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.e.golgirview.ui.main.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_launcherFragment"
+            app:destination="@id/launcherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.e.golgirview.ui.main.QuestionFragment"
+        android:label="QuestionFragment" >
+        <action
+            android:id="@+id/action_questionFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+        <action
+            android:id="@+id/action_questionFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.e.golgirview.ui.main.SummaryFragment"
+        android:label="SummaryFragment" >
+        <action
+            android:id="@+id/action_summaryFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_summaryFragment_to_launcherFragment"
+            app:destination="@id/launcherFragment" />
+    </fragment>
+</navigation>
